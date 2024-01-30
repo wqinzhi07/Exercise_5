@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click Detector With Color</title>
+</head>
+<body>
+    <button id="changeColorButton">Change Color</button>
+
+    <script>
+        let count = 0;
+        let colors = ['tomato', 'yellow', 'purple', 'orange'];
+
+        document.getElementById('changeColorButton').addEventListener('click', function() {
+            document.body.style.backgroundColor = colors[count];
+            
+            console.log(`Current color: ${colors[count]}`);
+            count = (count + 1) % colors.length;
+        });
+    </script>
+</body>
+</html>
